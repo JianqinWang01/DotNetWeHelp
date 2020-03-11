@@ -6,4 +6,66 @@
 
 
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Custom' ">
+    <StartAction>Project</StartAction>
+    <ApplicationURL>https://localhost:5003;http://localhost:5002</ApplicationURL>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.19" />
+    <PackageReference Include="NuGetPowerTools" Version="0.29.0" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.1" />
+    <PackageReference Include="ReflectionIT.Mvc.Paging" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\images\" />
+    <Folder Include="Services\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Migrations\20200302050318_InitialCreateNews.cs" />
+    <Compile Remove="Migrations\20200302050318_InitialCreateNews.Designer.cs" />
+    <Compile Remove="Migrations\GlobalDBContextModelSnapshot.cs" />
+    <Compile Remove="Migrations\20200309022948_addingIdentity.Designer.cs" />
+    <Compile Remove="Migrations\20200309022948_addingIdentity.cs" />
+    <Compile Remove="Models\EmptyClass.cs" />
+    <Compile Remove="Migrations\20200302052402_InitialCreateNews.cs" />
+    <Compile Remove="Migrations\20200302052402_InitialCreateNews.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\06a55f75-6bb1-4a8a-9b8d-f638f281ca14_memo.png" />
+    <Content Remove="wwwroot\images\bd4a14f0-57fe-4462-aac2-e7ed8dd5b747_drivericon.png" />
+    <Content Remove="wwwroot\images\7dda30b8-7d2d-454d-88ef-63d0ab1fa361_memo.png" />
+    <Content Remove="wwwroot\images\d5b0ba9f-bcde-4ac7-9b59-bd059b934f6f_drivericon.png" />
+    <Content Remove="wwwroot\images\e6a2eb21-7a8f-4d50-be27-7fbf69f94a33_app logo 2.png" />
+    <Content Remove="wwwroot\images\718d5e1b-8796-42fb-84fb-206345275e53_drivericon.png" />
+    <Content Remove="wwwroot\images\f763c927-3ab6-45cc-a9e8-ccc2ed0cb643_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\e4e6d927-33b3-4186-b6b4-22f2a32ea8b7_content.png" />
+    <Content Remove="wwwroot\images\fd7178eb-8aa4-4108-874f-526ad23527c2_app logo 2.png" />
+    <Content Remove="wwwroot\images\e38885be-d942-427b-99b6-8937e56bbdeb_app logo 2.png" />
+    <Content Remove="wwwroot\images\1c3c532d-cd25-4bdb-83eb-c9fb58c16b9c_app logo 2.png" />
+    <Content Remove="wwwroot\images\561c910d-1506-4058-a4ab-88e8610425e8_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\73808304-f9a4-4aa0-bee4-c8a83f989b34_app logo 2.png" />
+    <Content Remove="wwwroot\images\2d048c8d-2758-4c48-874e-343a0ecb594b_app logo 1.png" />
+    <Content Remove="wwwroot\images\f74f7583-10a9-4682-b27b-8be1d8f64b97_drivericon.png" />
+    <Content Remove="wwwroot\images\fcb9e44d-10c0-4106-8bc9-f83c3ad7f971_app logo 1.png" />
+    <Content Remove="wwwroot\images\82a686fa-9b90-4b3a-beaa-329f72ab64b5_drivericon.png" />
+    <Content Remove="wwwroot\images\61580d0b-3f10-43ac-bdf9-afa35c7a16a2_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\2e8d66b2-1df6-447e-89b0-43dbcead223d_drivericon.png" />
+    <Content Remove="wwwroot\images\a56f04dd-755d-4c53-940d-b4b390ce1674_memo.png" />
+    <Content Remove="wwwroot\images\4f3aa82d-a86d-45bb-9822-fcc9866a560c_drivericon.png" />
+    <Content Remove="wwwroot\8ac4d685-bc70-442a-b439-30abe1956db8_memo.png" />
+  </ItemGroup>
 </Project>

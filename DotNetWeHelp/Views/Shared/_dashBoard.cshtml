@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "WeHelp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/css/dashboard.css">
+
+<link rel="stylesheet" href="~/css/dashboardleftnav.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="container" style="margin-top:10px">
+    <div class="row">
+        <div class="col col-sm-12 col-md-3 col-lg-3">
+
+            <div id="wrapper">
+                <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark" id="accordionSidebar" style="font-size: x-large; font-family: 'Quicksand-Bold', sans-serif;">
+                    <!-- Divider -->
+                    <hr class="sidebar-divider my-0">
+
+                    <!-- Nav Item - Dashboard -->
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"
+                           aria-labelledby="accordionSidebar">
+                            <i class="fa fa-tachometer bigiconfont"></i>
+                            <span class="bigiconfont">Dashboard</span>
+                        </a>
+                    </li>
+                    <!-- Divider -->
+                    <hr class="sidebar-divider">
+                    <!-- Heading -->
+                    <div class="sidebar-heading">
+                        <span class="bigiconfont">Interface</span>
+                    </div>
+                    <!-- Nav Item - Statistics -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-bar-chart bigiconfont"></i>
+                            <span class="bigiconfont">Statistics</span>
+                        </a>
+                    </li>
+
+
+                    <!-- Nav Item - Users -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-user bigiconfont"></i>
+                            <span class="bigiconfont">Users</span>
+                        </a>
+                    </li>
+
+                    <!-- Nav Item - News -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-newspaper-o bigiconfont"></i>
+                            <span class="bigiconfont">News</span>
+                        </a>
+                    </li>
+
+                    <!-- Nav Item - Events -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fa fa-calendar bigiconfont"></i>
+                            <span class="bigiconfont">Events</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <script src="~/js/app.js"></script>
+            @RenderSection("Scripts", required: true)
+
+        </div>
+        <div class="col col-sm-12 col-md-9 col-lg-9">
+            @RenderBody()
+        </div>
+    </div>
+
+</div>
