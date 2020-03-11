@@ -1,0 +1,25 @@
+div > h6 {
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+}
+
+div > a > button {
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 8px;
+    color: #1b4b72;
+    border: #1b4b72 solid 2px;
+}
+
+div > a > button:hover {
+    background-color: #1b4b72;
+    color: white;
+    transition-duration: 0.6s;
+}
+
+#boldSubtitle {
+    font-weight: bold;
+}

@@ -1,0 +1,97 @@
+@model DotNetWeHelp.Models.News
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_dashBoard.cshtml";
+}
+
+<div class="card shadow">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Are you sure to delete?</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Title)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.Title)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.CreateDate)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.CreateDate)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.ImagePath)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.Description)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.Description)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.CreatedDate)
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-sm-4">
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </div>
+            <div class="col-sm-6">
+                @Html.DisplayFor(model => model.ModifiedDate)
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="card-footer">
+        <form asp-action="Delete" method="post" asp-route-id="@Model.Id">
+            <div class="float-right">
+                <div class="form-group">
+                 
+                        <button type="submit"  class="btn btn-danger" >Delete</button>
+                    </div>
+
+
+            </div>
+        </form>
+        
+
+
+        <div class="float-right">
+            <div class="form-group">
+
+                <button class="btn  btn-primary" onclick="location.href='@Url.Action("Index", "News")'">Cancel</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
