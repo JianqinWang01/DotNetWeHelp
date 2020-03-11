@@ -67,5 +67,22 @@
     <Content Remove="wwwroot\images\a56f04dd-755d-4c53-940d-b4b390ce1674_memo.png" />
     <Content Remove="wwwroot\images\4f3aa82d-a86d-45bb-9822-fcc9866a560c_drivericon.png" />
     <Content Remove="wwwroot\8ac4d685-bc70-442a-b439-30abe1956db8_memo.png" />
+    <Content Remove="wwwroot\images\561c910d-1506-4058-a4ab-88e8610425e8_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\8d16a966-a2d8-4b54-979b-06e25891d11a_app logo 2.png" />
+    <Content Remove="wwwroot\images\f763c927-3ab6-45cc-a9e8-ccc2ed0cb643_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\02df6e1c-96a4-44cd-b46e-6d4a5b6b1b3c_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\3d798c4a-970a-43ee-b637-78eede34113a_drivericon.png" />
+    <Content Remove="wwwroot\images\e71ca88c-aecf-40aa-b88d-84f9d96d2f7a_app logo 1.png" />
+    <Content Remove="wwwroot\images\5858b6d6-8a51-47ea-9da2-b71409378759_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\acd82151-ddbd-415e-bd19-47111d3f4838_content.png" />
+    <Content Remove="wwwroot\images\23617de9-8841-4504-96c3-175153a5750a_drivericon.png" />
+    <Content Remove="wwwroot\images\1c572618-518b-4dfa-8185-e07d41339d5f_drivericon.png" />
+    <Content Remove="wwwroot\images\0d0f7faf-d8f0-4418-9eef-bcb074f4060f_app logo 2.png" />
+    <Content Remove="wwwroot\images\73904bc9-073a-4dc8-abd6-1d0a8adf4cd0_app logo 2.png" />
+    <Content Remove="wwwroot\images\c2cfff0c-f855-4070-a523-2d18492b3958_drivericon.png" />
+    <Content Remove="wwwroot\images\899def82-235d-4cb9-addf-56652dc0a3c7_memo.png" />
+    <Content Remove="wwwroot\images\61580d0b-3f10-43ac-bdf9-afa35c7a16a2_app logo 1 %281%29.png" />
+    <Content Remove="wwwroot\images\ded9a7f3-0a1d-4463-bc71-3b533b42be39_app logo 2.png" />
+    <Content Remove="wwwroot\images\e7536acc-4beb-4598-b61f-6c2b85b2c284_app logo 2.png" />
   </ItemGroup>
 </Project>
