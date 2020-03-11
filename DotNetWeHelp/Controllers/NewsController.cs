@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetWeHelp.Controllers
 {
+    //[Authorize]
     public class NewsController : Controller
     {
         private readonly GlobalDBContext _context;
