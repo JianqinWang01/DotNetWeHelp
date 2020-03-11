@@ -1,0 +1,95 @@
+
+/*
+CRISIS BANNER
+ */
+#crisis-banner {
+    font-family: 'Quicksand-Medium', sans-serif;
+    background-color: #901d31;
+    width: 100%;
+    position: static;
+    top: 0;
+    z-index: 2001;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#crisis-banner-content {
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*
+CAROUSEL BANNER
+ */
+
+.carousel-item {
+    font-family: 'Quicksand', sans-serif;
+    height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-inner {
+
+}
+
+/*
+NEWS/EVENTS/SOCIAL MEDIA SECTION
+ */
+
+h3 {
+    color: white;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#newsContent{
+    color: white;
+    text-align: left;
+}
+
+#picturePlaceholder {
+    width: 150px;
+    height: 148px;
+    float: left;
+    margin: 0 20px;
+}
+
+#newsParagraph {
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
+    word-wrap: break-spaces;
+    text-overflow: ellipsis;
+    height: 100px;
+}
+
+#continueReading {
+    color: #1cc88a;
+    font-weight: bold;
+}
+
+/*
+SERVICE PARTNER SECTION
+ */
+
+.slider-wrap {
+    display: block;
+    margin: 0 auto;
+}
+
+.slider-image {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.slick-track {
+    height: 300px;
+}

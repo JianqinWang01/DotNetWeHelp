@@ -1,0 +1,105 @@
+@model ReflectionIT.Mvc.Paging.PagingList<DotNetWeHelp.Models.News>
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *, ReflectionIT.Mvc.Paging
+
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_dashBoard.cshtml";
+}
+
+<div class="card shadow">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">NEWS</h6>
+        <div>
+            <ul class="pagination pagination-sm">
+                @for (var i = 1; i <= Model.PageCount; i++)
+                {
+                    <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                        <a href="?page=@i" class="page-link">@i</a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="card-body">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Title)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CreateDate)
+                    </th>
+                   
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreateDate)
+                        </td>
+                       
+                        <td>
+                            hello
+                        </td>
+
+                        <td>
+                            <div class="row">
+                                <button class="btn btn-sm btn-primary " onclick="location.href='@Url.Action("Edit", "News", new { id = item.Id })'">Edit</button>&nbsp;
+                                <button class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("Details", "News", new { id = item.Id })'">Details</button>&nbsp;
+                                <button class="btn btn-sm btn-danger" onclick="location.href='@Url.Action("Delete", "News", new { id = item.Id })'">Delete</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+        <hr />
+
+
+        <button class="btn btn-warning" onclick='window.location = "@Url.Action("Create", "News")";'>Create New</button>
+    </div>
+</div>
+<div>
+    <ul class="pagination pagination-sm">
+        <li class="page-item @(Model.PageIndex-1!=0 ? "active" : "disabled")">
+            <a href="?page=@(
+       (Model.PageIndex - 1 == 0)? Model.PageIndex:Model.PageIndex-1)"
+               tabindex="-1" class="page-link ">Previous</a>
+        </li>
+        @for (var i = 1; i <= Model.PageCount; i++)
+        {
+            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                <a href="?page=@i" class="page-link">@i</a>
+            </li>
+        }
+        <li class="page-item @(Model.PageIndex+1>Model.PageCount ? "disabled" : "active")">
+            <a href="?page=@(
+       (Model.PageIndex < Model.PageCount)? Model.PageIndex+1:Model.PageIndex)"
+                class="page-link ">Next</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

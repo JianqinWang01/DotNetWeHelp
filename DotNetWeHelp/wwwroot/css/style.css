@@ -1,0 +1,129 @@
+﻿.myImg {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100,300');
+@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
+
+* {
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+.grid-container-lanttern {
+    display: flex;
+    margin: auto;
+    height: 200px;
+    padding: 10px;
+    width: 100%;
+}
+
+.lanterngrandfather {
+    width: 250px;
+    height: 150px;
+    margin-left: 15%;
+    /* background-color: #646464;*/
+    background-color: #000000;
+    border-radius: 150px;
+    /*background-image: radial-gradient(red 5%, red 15%, white 60%);*/
+}
+
+.lanternparent {
+    margin: auto;
+    text-align: center;
+    /*padding:5% 5%;*/
+    background-color: transparent;
+    background-image: url(http://www.wallgn.com/images/2013/09/dark-night-black-wolf-howling-clouds-moon-halloween.jpg);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.lantern {
+    margin-left: 28%;
+    margin-top: 30px;
+    height: 80px;
+    width: 100px;
+    border: solid 1px #f00;
+    border-radius: 35px;
+    -webkit-box-shadow: 0px 0px 50px 20px rgba(250,80,0,1);
+    -moz-box-shadow: 0px 0px 50px 20px rgba(250,80,0,1);
+    box-shadow: 0px 0px 50px 20px rgba(250,80,0,1);
+    background-color: #f00;
+}
+
+    .lantern:before {
+        height: 20px;
+        width: 50px;
+        background-color: green;
+        content: "IOS";
+        color: white;
+        display: block;
+        margin-top: -21px;
+        border-radius: 5px;
+        margin-left: 25px;
+        border: solid 1px #333;
+        text-align: center;
+    }
+
+    .lantern:after {
+        margin-top: 80px;
+        display: block;
+        border: solid 1px #333;
+        height: 25px;
+        width: 60px;
+        background-color: green;
+        content: "Android";
+        color: white;
+        margin-left: 20px;
+        border-radius: 5px;
+    }
+
+.lanternchild {
+    display: block;
+    width: 50%;
+    height: 50%;
+    border-radius: 30px;
+    /*background-color:#ff0;*/
+    -webkit-box-shadow: inset 0px 0px 50px 34px rgba(250,0,0,1);
+    -moz-box-shadow: inset 0px 0px 50px 34px rgba(250,0,0,1);
+    box-shadow: inset 0px 0px 70px 34px rgba(250,0,0,1);
+}
+
+.lantern {
+    -moz-animation: 3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation: swing 3s infinite ease-in-out;
+    -webkit-transform-origin: 50% -100px;
+}
+
+@-moz-keyframes swing {
+    0% {
+        -moz-transform: rotate(-10deg)
+    }
+
+    50% {
+        -moz-transform: rotate(10deg)
+    }
+
+    100% {
+        -moz-transform: rotate(-10deg)
+    }
+}
+
+@-webkit-keyframes swing {
+    0% {
+        -webkit-transform: rotate(-10deg)
+    }
+
+    50% {
+        -webkit-transform: rotate(10deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(-10deg)
+    }
+}
