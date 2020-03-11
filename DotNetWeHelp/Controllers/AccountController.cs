@@ -32,7 +32,7 @@ namespace DotNetWeHelp.Controllers
             //_smsSender = smsSender;
             //_logger = loggerFactory.CreateLogger<AccountController>();
         }
-
+        [AllowAnonymous]
         public IActionResult Register()
         {
             return View();
@@ -42,10 +42,10 @@ namespace DotNetWeHelp.Controllers
             if (ModelState.IsValid)
             {
                 var user = new IdentityUser { UserName = model.Email, Email = model.Email };
-                var result = await _userManager.CreateAsync(user);
+                var result = await _userManager.CreateAsync(user,model.Password);
                 if (result.Succeeded) {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "News");
+                    return RedirectToAction("Index", "Home");
                 }
                 foreach (var error in result.Errors) {
                     ModelState.AddModelError("", error.Description);
@@ -53,5 +53,44 @@ namespace DotNetWeHelp.Controllers
             }
             return View(model);
         }
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
+        [HttpGet]
+        [AllowAnonymous]
+        public  IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        //[AllowAnonymous]
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+
+            if (ModelState.IsValid)
+            {
+                Console.WriteLine("Grab:" + model.Email + ":" + model.Password);
+                // This doesn't count login failures towards account lockout
+                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe,false);
+                if (result.Succeeded)
+                {
+
+                    return RedirectToAction("Index", "News");
+                }
+                Console.WriteLine("Resutl:" + result.Succeeded);
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                
+            }
+
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
+
     }
 }
